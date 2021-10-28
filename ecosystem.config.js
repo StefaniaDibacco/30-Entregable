@@ -5,6 +5,7 @@ module.exports = {
       script: './dist/index.js',
       watch: true,
       autorestart: true,
+      instances: 4,
       args: '--mode fork --run pm2 --port 8081',
     },
     {

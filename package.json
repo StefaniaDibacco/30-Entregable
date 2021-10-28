@@ -8,7 +8,7 @@
     "start": "nodemon ./dist/index.js",
     "dev": "tsc -W && start",
     "prod": "npm run build && node_modules\\.bin\\forever -w start ./dist/index.js",
-    "prod-pm2": "npm run build && node_modules\\.bin\\pm2 start ecosystem.config.js",
+    "prod-pm2": "npm run build && node_modules\\.bin\\pm2 start ecosystem.config.js --watch",
     "prod-pm2:fork": "npm run build && node_modules\\.bin\\pm2 start ecosystem.config.js --only app-fork",
     "prod-pm2:cluster": "npm run build && node_modules\\.bin\\pm2 start ecosystem.config.js --only app-cluster",
     "build": "tsc"

@@ -15,9 +15,13 @@ app.use(express.static(publicFolderPath));
 
 app.use(
   session({
-    secret: 'your secret line of secretness',
+    secret: 'KEY_SECRET',
     resave: true,
-    saveUninitialized: true,
+    saveUninitialized: false,
+    rolling: true,
+    cookie: {
+      maxAge: 600000,
+    },
   })
 );
 
