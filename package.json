@@ -1,5 +1,5 @@
 {
-  "name": "14-entregable",
+  "name": "30-entregable",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -7,9 +7,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon ./dist/index.js",
     "dev": "tsc -W && start",
-    "prod": "npm run build && node_modules/.bin/forever -w start ./dist/src/index.js",
-    "prod:pm2:fork": "npm run build && node_modules/.bin/pm2 start ecosystem.config.js --only app-fork",
-    "prod:pm2:cluster": "npm run build && node_modules/.bin/pm2 start ecosystem.config.js --only app-cluster",
+    "prod": "npm run build && node_modules\\.bin\\forever -w start ./dist/index.js",
+    "prod-pm2": "npm run build && node_modules\\.bin\\pm2 start ecosystem.config.js",
+    "prod-pm2:fork": "npm run build && node_modules\\.bin\\pm2 start ecosystem.config.js --only app-fork",
+    "prod-pm2:cluster": "npm run build && node_modules\\.bin\\pm2 start ecosystem.config.js --only app-cluster",
     "build": "tsc"
   },
   "repository": {
@@ -71,7 +72,7 @@
     "passport": "^0.5.0",
     "passport-facebook": "^3.0.0",
     "passport-local": "^1.0.0",
-    "passport-twitter": "^1.0.4",
+    "passport-twitter": "^0.1.5",
     "pm2": "^5.1.2",
     "sqlite3": "^4.2.0"
   }
