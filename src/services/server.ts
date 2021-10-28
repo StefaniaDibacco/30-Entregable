@@ -15,7 +15,7 @@ app.use(express.static(publicFolderPath));
 
 app.use(
   session({
-    secret: 'KEY_SECRET',
+    secret: 'key_secret',
     resave: true,
     saveUninitialized: false,
     rolling: true,

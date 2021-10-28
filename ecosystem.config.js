@@ -6,7 +6,7 @@ module.exports = {
       watch: true,
       autorestart: true,
       instances: 4,
-      args: '--mode fork --run pm2 --port 8081',
+      args: '--mode fork --run pm2 --PORT 8081',
     },
     {
       name: 'app-cluster',
@@ -14,7 +14,7 @@ module.exports = {
       watch: true,
       autorestart: true,
       instances: 4,
-      args: '--mode cluster --run pm2 --port 8082',
+      args: '--mode cluster --run pm2 --PORT 8082',
     },
   ],
 };
